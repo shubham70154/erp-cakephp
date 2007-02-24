@@ -1,0 +1,14 @@
+<p class="notice">Your database configuration file is <?php echo  file_exists(CONFIGS.'database.php') ?' present.' . $filePresent = ' ' : ' not present.'; ?></p>
+<?php if (!empty($filePresent)):?>
+<?php uses('model' . DS . 'connection_manager'); $db = ConnectionManager::getInstance(); ?>
+<?php $connected = $db->getDataSource('default'); ?>
+<p class="notice">Cake<?php echo $connected->isConnected() ? ' is able to' : ' is not able to';?> connect to the database.</p>
+<br />
+<?php endif; ?>
+<h1>Sweet, "Multiporte" got Baked by CakePHP!</h1>
+<h2>Editing this Page</h2>
+<p>
+To change the content of this page, edit: C:\Arquivos de programas\Apache Software Foundation\Apache2.2\htdocs\erp\multiporte\views\pages\home.thtml.<br />
+To change its layout, edit: C:\Arquivos de programas\Apache Software Foundation\Apache2.2\htdocs\erp\multiporte\views\layouts\default.thtml.<br />
+You can also add some CSS styles for your pages at: C:\Arquivos de programas\Apache Software Foundation\Apache2.2\htdocs\erp\multiporte\webroot/css/.
+</p>

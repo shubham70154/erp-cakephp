@@ -1,0 +1,7 @@
+<h1>Alterar cliente</h1>
+
+<?php
+echo $html->formTag('/clientes/alterar/' . $data['Cliente']['id']);
+echo $form->generateFields($fieldNames);
+echo $form->generateSubmitDiv('Salvar'); ?>
+</form>

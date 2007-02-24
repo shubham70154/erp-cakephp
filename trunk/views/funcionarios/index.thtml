@@ -1,0 +1,49 @@
+<h1>Lista de Funcion&aacute;rios</h1>
+
+<table class="inav" cellpadding="0" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Endere&ccedil;o</th>
+      <th>Bairro</th>
+      <th>CEP</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>CPF</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+<?php
+$iRowIndex = 0;
+if(is_array($data)) {
+  foreach ($data as $row) {
+    if($iRowIndex++ % 2 == 0) {
+      echo "    <tr>";
+    } else {
+      echo "    <tr class='altRow'>";
+    }
+
+    echo "      <td>{$row['Funcionario']['nome']}</td>\n";
+    echo "      <td>{$row['Funcionario']['endereco']} - {$row['Funcionario']['complemento']}</td>\n";
+    echo "      <td>{$row['Funcionario']['bairro']}</td>\n";
+    echo "      <td>{$row['Funcionario']['cep']}</td>\n";
+    echo "      <td>{$row['Funcionario']['cidade']}</td>\n";
+    echo "      <td>{$row['Funcionario']['estado']}</td>\n";
+    echo "      <td>{$row['Funcionario']['cpf']}</td>\n";
+?>
+      <td class="listactions">
+        <?php echo $html->link('Visualizar',"/funcionarios/detalhes/{$row['Funcionario']['id']}/")?>
+        <?php echo $html->link('Alterar',"/funcionarios/alterar/{$row['Funcionario']['id']}/")?>
+        <?php echo $html->link('Excluir',"/funcionarios/excluir/{$row['Funcionario']['id']}/", null, 'Você tem certeza que deseja apagar o funcionário '.$row['Funcionario']['nome'].'?')?>
+      </td>
+    </tr>
+  </tbody>
+<?php
+  }
+}
+?>
+</table>
+<ul class="actions">
+  <li><?php echo $html->link('Novo Funcionário', '/funcionarios/adicionar'); ?></li>
+</ul>

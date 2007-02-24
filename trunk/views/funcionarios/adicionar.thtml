@@ -1,0 +1,7 @@
+<h1>Adicinar Funcion&aacute;rio</h1>
+
+<?php
+echo $html->formTag('/funcionarios/adicionar/');
+echo $form->generateFields($fieldNames);
+echo $form->generateSubmitDiv('Adicionar');?>
+</form>

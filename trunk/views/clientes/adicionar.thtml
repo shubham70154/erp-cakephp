@@ -1,0 +1,7 @@
+<h1>Adicinar Cliente</h1>
+
+<?php
+echo $html->formTag('/clientes/adicionar/');
+echo $form->generateFields($fieldNames);
+echo $form->generateSubmitDiv('Adicionar');?>
+</form>

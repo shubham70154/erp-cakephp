@@ -16,6 +16,13 @@ class Categoria extends AppModel {
   var $validade = array(
     'tipo' => '/(entrada)|(saida)/'
   );
+  
+  function gerarLista() {
+    $this->recursive = 20;
+    $this->unbindModel(array('hasMany' => array('Lancamento')));
+    $lista = $this->findAll('Categoria.categoria_pai_id IS NULL', null, 'Categoria.nome ASC');
+    return $lista;
+  }
 }
 
 ?>

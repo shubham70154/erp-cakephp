@@ -8,24 +8,13 @@ function space($qnt) {
   return $espaco;
 }
 
-function listar($base, $nivel) {
-  if (is_array($base)) {
-    foreach ($base as $chave => $valores) {
-      echo space($nivel) . ($valores['tipo'] == 'entrada' ? '+' : '-') . $valores['nome'] . "<br />\n";
-      for ($i = 0; ; $i++) {
-        if (isset($valores[$i])) {
-          listar(array($valores[$i]), $nivel + 1);
-        } else {
-          break;
-        }
-      }
-    }
+function listar($vetor, $nivel) {
+  foreach($vetor as $valor) {
+    echo space($nivel) . ' ' . ($valor['tipo'] == 'entrada' ? '+' : '-') . ' ' . $valor['nome'] . "<br />\n";
+    listar($valor['subs'], $nivel + 1);
   }
 }
 
-$base = $data;
-foreach ($base as $chave => $valores) {
-  echo ($valores['Categoria']['tipo'] == 'entrada' ? '+' : '-') . $valores['Categoria']['nome'] . "<br />\n";
-  listar($base[$chave]['SubCategoria'], 1);
-}
+listar($data, 0);
+
 ?>

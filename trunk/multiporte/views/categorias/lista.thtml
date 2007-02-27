@@ -1,20 +1,5 @@
 <?php
 
-function space($qnt) {
-  $espaco = '';
-  for ($qnt; $qnt > 0; $qnt--) {
-    $espaco .= '&nbsp;&nbsp;&nbsp;&nbsp;';
-  }
-  return $espaco;
-}
-
-function listar($vetor, $nivel) {
-  foreach($vetor as $valor) {
-    echo space($nivel) . ' ' . ($valor['tipo'] == 'entrada' ? '+' : '-') . ' ' . $valor['nome'] . "<br />\n";
-    listar($valor['subs'], $nivel + 1);
-  }
-}
-
-listar($data, 0);
+$format->listarCategorias($data);
 
 ?>

@@ -5,6 +5,7 @@ class CategoriasController extends AppController {
   
   var $uses = array('Categoria');
   var $scaffold;
+  var $helpers = array('Format');
   
   function lista() {
     $this->set('data', $this->Categoria->gerarLista());

@@ -1,7 +1,0 @@
-<h1>Alterar obra</h1>
-
-<?php
-echo $html->formTag('/obras/alterar/' . $data['Obra']['id']);
-echo $form->generateFields($fieldNames);
-echo $form->generateSubmitDiv('Salvar'); ?>
-</form>

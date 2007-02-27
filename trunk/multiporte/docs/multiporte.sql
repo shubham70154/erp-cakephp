@@ -1,4 +1,4 @@
--- MySQL dump 10.10
+﻿-- MySQL dump 10.10
 --
 -- Host: localhost    Database: multiporte
 -- ------------------------------------------------------
@@ -366,6 +366,7 @@ CREATE TABLE `lancamentos` (
   `conta_id` int(10) unsigned default NULL,
   `tipo` set('entrada','saida') default NULL,
   `categoria_id` int(10) unsigned default NULL,
+  `data` date default NULL,
   `descricao` varchar(200) default NULL,
   `valor` decimal(10,2) default NULL,
   PRIMARY KEY  (`id`)

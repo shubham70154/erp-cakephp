@@ -1,7 +1,0 @@
-<h1>Adicinar Obra</h1>
-
-<?php
-echo $html->formTag('/obras/adicionar/' . $data['Obra']['cliente_id']);
-echo $form->generateFields($fieldNames);
-echo $form->generateSubmitDiv('Adicionar');?>
-</form>

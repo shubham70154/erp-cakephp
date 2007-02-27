@@ -1,7 +1,0 @@
-<h1>Alterar Funcion&aacute;rio</h1>
-
-<?php
-echo $html->formTag('/funcionarios/alterar/' . $data['Funcionario']['id']);
-echo $form->generateFields($fieldNames);
-echo $form->generateSubmitDiv('Salvar'); ?>
-</form>

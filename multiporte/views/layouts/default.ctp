@@ -1,12 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php echo $html->docType('xhtml-trans'); ?>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>Multiporte</title>
-
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="icon" href="/financas/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="/financas/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" type="text/css" href="/financas/css/cake.generic.css" /></head>
+  <title>Multiporte</title>
+  <?php
+    echo $html->charset('iso-8859-1');
+    echo "\n";
+    echo $html->meta(null, '/favicon.ico', array('type' => 'icon', 'rel' => 'icon'));
+    echo "\n";
+    echo $html->meta(null, '/favicon.ico', array('type' => 'icon', 'rel' => 'shortcut'));
+    echo "\n";
+    echo $html->meta(null, '/css/cake.generic.css', array('type' => 'css', 'rel' => 'stylesheet'));
+    echo "\n";
+  ?>
+</head>
 <body>
 	<div id="container">
 		<div id="header">

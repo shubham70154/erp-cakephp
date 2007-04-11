@@ -5,11 +5,11 @@
 		<dt>Id</dt>
 		<dd>&nbsp;<?php echo $grupoCategoria['GrupoCategoria']['id']; ?></dd>
 		<dt>Grupo Pai</dt>
-		<dd>&nbsp;<?php echo utf8_decode($grupoCategoria['SubGrupoPai']['nome']); ?></dd>
+		<dd>&nbsp;<?php echo $grupoCategoria['SubGrupoPai']['nome']; ?></dd>
 		<dt>Nome</dt>
-		<dd>&nbsp;<?php echo utf8_decode($grupoCategoria['GrupoCategoria']['nome']); ?></dd>
-		<dt>Descrição</dt>
-		<dd>&nbsp;<?php echo utf8_decode($grupoCategoria['GrupoCategoria']['descricao']); ?></dd>
+		<dd>&nbsp;<?php echo $grupoCategoria['GrupoCategoria']['nome']; ?></dd>
+		<dt>Descri&ccedil;&atilde;o</dt>
+		<dd>&nbsp;<?php echo $grupoCategoria['GrupoCategoria']['descricao']; ?></dd>
 	</dl>
 </div>
 <div class="actions">
@@ -28,16 +28,16 @@
 	<tr>
 		<th>Id</th>
 		<th>Nome</th>
-		<th>Descrição</th>
+		<th>Descri&ccedil;&atilde;o</th>
 		<th>Criado</th>
 		<th>Modificado</th>
-		<th>Ações</th>
+		<th>A&ccedil;&otilde;es</th>
 	</tr>
 <?php foreach($grupoCategoria['SubGrupo'] as $subGrupo):?>
 	<tr>
 		<td><?php echo $subGrupo['id'];?></td>
-		<td><?php echo utf8_decode($subGrupo['nome']);?></td>
-		<td><?php echo (empty($subGrupo['descricao']) ? "&nbsp;" : utf8_decode($subGrupo['descricao']));?></td>
+		<td><?php echo $subGrupo['nome'];?></td>
+		<td><?php echo (empty($subGrupo['descricao']) ? "&nbsp;" : $subGrupo['descricao']);?></td>
 		<td><?php echo date('d/m/Y', strtotime($subGrupo['created']));?></td>
 		<td><?php echo date('d/m/Y', strtotime($subGrupo['modified']));?></td>
 		<td class="actions">
@@ -67,13 +67,13 @@
 		<th>Tipo</th>
 		<th>Criado</th>
 		<th>Modificado</th>
-		<th>Ações</th>
+		<th>A&ccedil;&otilde;es</th>
 	</tr>
 <?php foreach($grupoCategoria['Categoria'] as $categoria):?>
 	<tr>
 		<td><?php echo $categoria['id'];?></td>
-		<td><?php echo utf8_decode($categoria['GrupoCategoria']['nome']);?></td>
-		<td><?php echo utf8_decode($categoria['nome']);?></td>
+		<td><?php echo $categoria['GrupoCategoria']['nome'];?></td>
+		<td><?php echo $categoria['nome'];?></td>
 		<td><?php echo $categoria['tipo'];?></td>
 		<td><?php echo date('d/m/Y', strtotime($categoria['created']));?></td>
 		<td><?php echo date('d/m/Y', strtotime($categoria['modified']));?></td>

@@ -9,7 +9,7 @@
     echo "\n<br /><br />\n"; 
     echo $html->link('Grupo de Categorias', array('controller'=> 'grupo_categorias', 'action'=>'index')); 
     echo "\n<br /><br />\n"; 
-    echo $html->link('Lancamentos', array('controller'=> 'lancamentos', 'action'=>'index')); 
+    echo $html->link(utf8_encode('Lançamentos'), array('controller'=> 'lancamentos', 'action'=>'index')); 
     echo "\n<br /><br />\n"; 
   ?>
 </div>

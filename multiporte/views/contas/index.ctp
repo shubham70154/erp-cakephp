@@ -6,17 +6,17 @@
 		<th><?php echo $paginator->sort('id');?></th>
 		<th><?php echo $paginator->sort('nome');?></th>
 		<th><?php echo $paginator->sort('descricao');?></th>
-		<th>Ações</th>
+		<th>A&ccedil;&otilde;es</th>
 	</tr>
 <?php foreach ($contas as $conta): ?>
 	<tr>
 		<td><?php echo $conta['Conta']['id']; ?></td>
-		<td><?php echo utf8_decode($conta['Conta']['nome']); ?></td>
-		<td><?php echo utf8_decode($conta['Conta']['descricao']); ?></td>
+		<td><?php echo $conta['Conta']['nome']; ?></td>
+		<td><?php echo $conta['Conta']['descricao']; ?></td>
 		<td class="actions">
 			<?php echo $html->link('Mostrar', array('action'=>'view', $conta['Conta']['id'])); ?>
 			<?php echo $html->link('Editar', array('action'=>'edit', $conta['Conta']['id'])); ?>
-			<?php echo $html->link('Excluir', array('action'=>'delete', $conta['Conta']['id']), null, 'Você tem certeza que deseja excluir a conta #' . $conta['Conta']['id'] . '?'); ?>
+			<?php echo $html->link('Excluir', array('action'=>'delete', $conta['Conta']['id']), null, utf8_encode('Você tem certeza que deseja excluir a conta #') . $conta['Conta']['id'] . utf8_encode('?')); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -25,8 +25,8 @@
 </div>
 <div class="paging">
 <?php echo $paginator->prev('<< anterior', array(), null, array('class'=>'disabled'));?>
-|
-<?php echo $paginator->next('próxima >>', array(), null, array('class'=>'disabled'));?>
+ |
+<?php echo $paginator->next(utf8_encode('próxima >>'), array(), null, array('class'=>'disabled'));?>
 </div>
 <div class="actions">
 	<ul>

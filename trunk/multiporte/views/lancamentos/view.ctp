@@ -1,5 +1,5 @@
-<div class="lancamento">
-<h2>Mostrando LanÁamento</h2>
+Ôªø<div class="lancamento">
+<h2>Mostrando Lan√ßamento</h2>
 
 	<dl>
 		<dt>Id</dt>
@@ -10,7 +10,7 @@
 		<dd>&nbsp;<?php echo $html->link($lancamento['Categoria']['nome'], array('controller'=> 'categorias', 'action'=>'view', $lancamento['Categoria']['id'])); ?></dd>
 		<dt>Conta</dt>
 		<dd>&nbsp;<?php echo $html->link($lancamento['Conta']['nome'], array('controller'=> 'contas', 'action'=>'view', $lancamento['Conta']['id'])); ?></dd>
-		<dt>Descri&ccedil;&atilde;o</dt>
+		<dt>Descri√ß√£o</dt>
 		<dd>&nbsp;<?php echo $lancamento['Lancamento']['descricao']?></dd>
 		<dt>Data</dt>
 		<dd>&nbsp;<?php echo date('d/m/Y', strtotime($lancamento['Lancamento']['data'])); ?></dd>
@@ -20,10 +20,10 @@
 </div>
 <div class="actions">
 	<ul>
-		<li><?php echo $html->link('Editar LanÁamento',   array('action'=>'edit', $lancamento['Lancamento']['id'])); ?> </li>
-		<li><?php echo $html->link('Excluir LanÁamento', array('action'=>'delete', $lancamento['Lancamento']['id']), null, utf8_encode('VocÍ tem certeza que deseja excluir o lanÁamento #') . $lancamento['Lancamento']['id'] . utf8_encode('?')); ?> </li>
-		<li><?php echo $html->link('Listar LanÁamentos', array('action'=>'index')); ?> </li>
-		<li><?php echo $html->link('Novo LanÁamento',	array('action'=>'add')); ?> </li>
+		<li><?php echo $html->link('Editar Lan√ßamento',   array('action'=>'edit', $lancamento['Lancamento']['id'])); ?> </li>
+		<li><?php echo $html->link('Excluir Lan√ßamento', array('action'=>'delete', $lancamento['Lancamento']['id']), null, 'Voc√™ tem certeza que deseja excluir o lan√ßamento #' . $lancamento['Lancamento']['id'] . '?'); ?> </li>
+		<li><?php echo $html->link('Listar Lan√ßamentos', array('action'=>'index')); ?> </li>
+		<li><?php echo $html->link('Novo Lan√ßamento',	array('action'=>'add')); ?> </li>
 		<li><?php echo $html->link('Listar Centro de Custo', array('controller'=> 'centro_custos', 'action'=>'index')); ?> </li>
 		<li><?php echo $html->link('Novo Centro de Custos', array('controller'=> 'centro_custos', 'action'=>'add')); ?> </li>
 		<li><?php echo $html->link('Listar Categorias', array('controller'=> 'categoria', 'action'=>'index')); ?> </li>

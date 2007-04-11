@@ -1,4 +1,4 @@
-<div class="grupoCategoria">
+﻿<div class="grupoCategoria">
 <h2>Editar Grupo de Categoria</h2>
 	<?php echo $form->create('GrupoCategoria');?>
 		<?php echo $form->input('id');?>
@@ -10,7 +10,7 @@
 </div>
 <div class="actions">
 	<ul>
-		<li><?php echo $html->link('Excluir', array('action'=>'delete', $html->tagValue('GrupoCategoria/id')), null, utf8_encode('Voc� tem certeza que deseja excluir o grupo #') . $html->tagValue('GrupoCategoria/id') . utf8_encode('?')); ?>
+		<li><?php echo $html->link('Excluir', array('action'=>'delete', $html->tagValue('GrupoCategoria/id')), null, 'Você tem certeza que deseja excluir o grupo #' . $html->tagValue('GrupoCategoria/id') . '?'); ?>
 		<li><?php echo $html->link('Listar Grupo de Categorias', array('action'=>'index')); ?></li>
 	</ul>
 </div>

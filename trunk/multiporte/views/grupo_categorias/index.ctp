@@ -1,4 +1,4 @@
-<div class="grupoCategorias">
+﻿<div class="grupoCategorias">
 <h2>Lista de Grupo de Categorias</h2>
 
 <table cellpadding="0" cellspacing="0">
@@ -7,7 +7,7 @@
 		<th><?php echo $paginator->sort('sub_grupo_id');?></th>
 		<th><?php echo $paginator->sort('nome');?></th>
 		<th><?php echo $paginator->sort('descricao');?></th>
-		<th>A&ccedil;&otilde;es</th>
+		<th>Ações</th>
 	</tr>
 <?php foreach ($grupoCategorias as $grupoCategoria): ?>
 	<tr>
@@ -18,7 +18,7 @@
 		<td class="actions">
 			<?php echo $html->link('Mostrar', array('action'=>'view', $grupoCategoria['GrupoCategoria']['id'])); ?>
 			<?php echo $html->link('Editar', array('action'=>'edit', $grupoCategoria['GrupoCategoria']['id'])); ?>
-			<?php echo $html->link('Excluir', array('action'=>'delete', $grupoCategoria['GrupoCategoria']['id']), null, utf8_encode('Voc� tem certeza que deseja excluir o grupo #') . $grupoCategoria['GrupoCategoria']['id'] . utf8_encode('?')); ?>
+			<?php echo $html->link('Excluir', array('action'=>'delete', $grupoCategoria['GrupoCategoria']['id']), null, 'Você tem certeza que deseja excluir o grupo #' . $grupoCategoria['GrupoCategoria']['id'] . '?'); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -28,7 +28,7 @@
 <div class="paging">
 <?php echo $paginator->prev('<< anterior', array(), null, array('class'=>'disabled'));?>
 |
-<?php echo $paginator->next(utf8_encode('pr�ximo >>'), array(), null, array('class'=>'disabled'));?>
+<?php echo $paginator->next('próximo >>', array(), null, array('class'=>'disabled'));?>
 </div>
 <div class="actions">
 	<ul>

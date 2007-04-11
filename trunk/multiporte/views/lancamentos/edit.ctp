@@ -1,4 +1,4 @@
-<div class="lancamento">
+ï»¿<div class="lancamento">
 <h2>Editar Lancamento</h2>
 	<?php echo $form->create('Lancamento');?>
 		<?php echo $form->input('id');?>
@@ -13,8 +13,8 @@
 </div>
 <div class="actions">
 	<ul>
-		<li><?php echo $html->link('Excluir', array('action'=>'delete', $html->tagValue('Lancamento/id')), null, utf8_encode('Você tem certeza que deseja excluir o lançamento #') . $html->tagValue('Lancamento/id') utf8_encode('?')); ?>
-		<li><?php echo $html->link('Listar Lançamentos', array('action'=>'index')); ?></li>
+		<li><?php echo $html->link('Excluir', array('action'=>'delete', $html->tagValue('Lancamento/id')), null, 'VocÃª tem certeza que deseja excluir o lanÃ§amento #' . $html->tagValue('Lancamento/id') '?'); ?>
+		<li><?php echo $html->link('Listar LanÃ§amentos', array('action'=>'index')); ?></li>
 		<li><?php echo $html->link('Mostrar Centro de Custos', array('controller'=> 'centro_custos', 'action'=>'view')); ?></li>
 		<li><?php echo $html->link('Adicionar Centro de Custos', array('controller'=> 'centro_custos', 'action'=>'add')); ?></li>
 		<li><?php echo $html->link('Mostrar Contas', array('controller'=> 'conta', 'action'=>'view')); ?></li>

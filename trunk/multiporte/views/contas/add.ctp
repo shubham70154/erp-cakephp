@@ -1,4 +1,4 @@
-<div class="conta">
+﻿<div class="conta">
 <h2>Nova Conta</h2>
 	<?php echo $form->create('Conta');?>
 		<?php echo $form->input('nome', array('class' => 'required'));?>

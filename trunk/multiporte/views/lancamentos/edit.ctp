@@ -13,7 +13,7 @@
 </div>
 <div class="actions">
 	<ul>
-		<li><?php echo $html->link('Excluir', array('action'=>'delete', $html->tagValue('Lancamento/id')), null, 'Você tem certeza que deseja excluir o lançamento #' . $html->tagValue('Lancamento/id') '?'); ?>
+		<li><?php echo $html->link('Excluir', array('action'=>'delete', $html->tagValue('Lancamento/id')), null, utf8_encode('Você tem certeza que deseja excluir o lançamento #') . $html->tagValue('Lancamento/id') utf8_encode('?')); ?>
 		<li><?php echo $html->link('Listar Lançamentos', array('action'=>'index')); ?></li>
 		<li><?php echo $html->link('Mostrar Centro de Custos', array('controller'=> 'centro_custos', 'action'=>'view')); ?></li>
 		<li><?php echo $html->link('Adicionar Centro de Custos', array('controller'=> 'centro_custos', 'action'=>'add')); ?></li>

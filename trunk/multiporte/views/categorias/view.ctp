@@ -9,14 +9,14 @@
 $i = 0;
 foreach ($grupo_origem as $grupo) {
   $i++;
-  echo $html->link(utf8_decode($grupo['nome']), array('controller'=> 'grupo_categorias', 'action'=>'view', $grupo['id']));
+  echo $html->link($grupo['nome'], array('controller'=> 'grupo_categorias', 'action'=>'view', $grupo['id']));
   if ($i != sizeof($grupo_origem)) {
     echo " => ";
   }
 }
 ?></dd>
 		<dt>Nome</dt>
-		<dd>&nbsp;<?php echo utf8_decode($categoria['Categoria']['nome']); ?></dd>
+		<dd>&nbsp;<?php echo $categoria['Categoria']['nome']; ?></dd>
 		<dt>Tipo</dt>
 		<dd>&nbsp;<?php echo $categoria['Categoria']['tipo']; ?></dd>
 	</dl>
@@ -24,7 +24,7 @@ foreach ($grupo_origem as $grupo) {
 <div class="actions">
 	<ul>
 		<li><?php echo $html->link('Editar Categoria',   array('action'=>'edit', $categoria['Categoria']['id'])); ?> </li>
-		<li><?php echo $html->link('Excluir Categoria', array('action'=>'delete', $categoria['Categoria']['id']), null, 'Você tem certeza que deseja excluir a categoria #' . $categoria['Categoria']['id'] . '?'); ?> </li>
+		<li><?php echo $html->link('Excluir Categoria', array('action'=>'delete', $categoria['Categoria']['id']), null, utf8_encode('Você tem certeza que deseja excluir a categoria #') . $categoria['Categoria']['id'] . utf8_encode('?')); ?> </li>
 		<li><?php echo $html->link('Listar Categorias', array('action'=>'index')); ?> </li>
 		<li><?php echo $html->link('Nova Categoria',	array('action'=>'add')); ?> </li>
 		<li><?php echo $html->link('Listar Grupo de Categoria', array('controller'=> 'grupo_categoria', 'action'=>'index')); ?> </li>
@@ -46,15 +46,15 @@ foreach ($grupo_origem as $grupo) {
 		<th>Valor</th>
 		<th>Criado</th>
 		<th>Modificado</th>
-		<th>Ações</th>
+		<th>A&ccedil;&otilde;es</th>
 	</tr>
 <?php foreach($categoria['Lancamento'] as $lancamento):?>
 	<tr>
 		<td><?php echo $lancamento['id'];?></td>
-		<td><?php echo utf8_decode($lancamento['CentroCusto']['nome']);?></td>
-		<td><?php echo utf8_decode($lancamento['Categoria']['nome']);?></td>
-		<td><?php echo utf8_decode($lancamento['Conta']['nome']);?></td>
-		<td><?php echo utf8_decode($lancamento['descricao']);?></td>
+		<td><?php echo $lancamento['CentroCusto']['nome'];?></td>
+		<td><?php echo $lancamento['Categoria']['nome'];?></td>
+		<td><?php echo $lancamento['Conta']['nome'];?></td>
+		<td><?php echo $lancamento['descricao'];?></td>
 		<td><?php echo date('d/m/Y', strtotime($lancamento['data']));?></td>
 		<td><?php echo number_format($lancamento['valor'], 2, ',', '.');?></td>
 		<td><?php echo date('d/m/Y', strtotime($lancamento['created']));?></td>
@@ -62,7 +62,7 @@ foreach ($grupo_origem as $grupo) {
 		<td class="actions">
 			<?php echo $html->link('Mostrar', array('controller'=> 'lancamentos', 'action'=>'view', $lancamento['id'])); ?>
 			<?php echo $html->link('Editar', array('controller'=> 'lancamentos', 'action'=>'edit', $lancamento['id'])); ?>
-			<?php echo $html->link('Excluir', array('controller'=> 'lancamentos', 'action'=>'delete', $lancamento['id']), null, 'Você tem certeza que deseja excluir o lançamento #' . $lancamento['id'] . '?'); ?>
+			<?php echo $html->link('Excluir', array('controller'=> 'lancamentos', 'action'=>'delete', $lancamento['id']), null, utf8_encode('Você tem certeza que deseja excluir o lançamento #') . $lancamento['id'] . utf8_encode('?')); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -71,7 +71,7 @@ foreach ($grupo_origem as $grupo) {
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $html->link('Novo Lançamento', array('controller'=> 'lancamentos', 'action'=>'add'));?> </li>
+			<li><?php echo $html->link(utf8_encode('Novo Lançamento'), array('controller'=> 'lancamentos', 'action'=>'add'));?> </li>
 		</ul>
 	</div>
 </div>

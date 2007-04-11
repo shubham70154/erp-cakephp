@@ -1,5 +1,5 @@
-<div class="lancamento">
-<h2>Novo Lan�amento</h2>
+﻿<div class="lancamento">
+<h2>Novo Lançamento</h2>
 	<?php echo $form->create('Lancamento');?>
 		<?php echo $form->input('centro_custo_id', array('options' => $centroCustos));?>
 		<?php echo $form->input('categoria_id', array('options' => $categorias));?>

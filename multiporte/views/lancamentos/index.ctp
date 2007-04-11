@@ -1,5 +1,5 @@
-<div class="lancamentos">
-<h2>Lista dos Lançamentos</h2>
+ï»¿<div class="lancamentos">
+<h2>Lista dos LanÃ§amentos</h2>
 
 <table cellpadding="0" cellspacing="0">
 	<tr>
@@ -10,7 +10,7 @@
 		<th><?php echo $paginator->sort('descricao');?></th>
 		<th><?php echo $paginator->sort('data');?></th>
 		<th><?php echo $paginator->sort('valor');?></th>
-		<th>A&ccedil;&otilde;es</th>
+		<th>AÃ§Ãµes</th>
 	</tr>
 <?php foreach ($lancamentos as $lancamento): ?>
 	<tr>
@@ -24,7 +24,7 @@
 		<td class="actions">
 			<?php echo $html->link('Mostrar', array('action'=>'view', $lancamento['Lancamento']['id'])); ?>
 			<?php echo $html->link('Editar', array('action'=>'edit', $lancamento['Lancamento']['id'])); ?>
-			<?php echo $html->link('Excluir', array('action'=>'delete', $lancamento['Lancamento']['id']), null, utf8_encode('Você tem certeza que deseja excluir o lançamento #') . $lancamento['Lancamento']['id'] . utf8_encode('?')); ?>
+			<?php echo $html->link('Excluir', array('action'=>'delete', $lancamento['Lancamento']['id']), null, 'VocÃª tem certeza que deseja excluir o lanÃ§amento #' . $lancamento['Lancamento']['id'] . '?'); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -34,10 +34,10 @@
 <div class="paging">
 <?php echo $paginator->prev('<< anterior', array(), null, array('class'=>'disabled'));?>
  |
-<?php echo $paginator->next(utf8_encode('próximo >>'), array(), null, array('class'=>'disabled'));?>
+<?php echo $paginator->next('prÃ³ximo >>', array(), null, array('class'=>'disabled'));?>
 </div>
 <div class="actions">
 	<ul>
-		<li><?php echo $html->link(utf8_encode('Novo Lançamento'), array('action'=>'add')); ?></li>
+		<li><?php echo $html->link('Novo LanÃ§amento', array('action'=>'add')); ?></li>
 	</ul>
 </div>

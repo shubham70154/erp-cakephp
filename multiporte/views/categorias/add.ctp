@@ -1,4 +1,4 @@
-<div class="categoria">
+﻿<div class="categoria">
 <h2>Nova Categoria</h2>
 	<?php echo $form->create('Categoria');?>
 		<?php echo $form->input('grupo_categoria_id', array('options' => $grupoCategorias));?>

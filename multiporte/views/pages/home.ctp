@@ -1,4 +1,4 @@
-<h2>Op&ccedil;&otilde;es</h2>
+﻿<h2>Opções</h2>
 <div align="center">
   <?php 
     echo $html->link('Categorias', array('controller'=> 'categorias', 'action'=>'index'));
@@ -9,7 +9,7 @@
     echo "\n<br /><br />\n"; 
     echo $html->link('Grupo de Categorias', array('controller'=> 'grupo_categorias', 'action'=>'index')); 
     echo "\n<br /><br />\n"; 
-    echo $html->link(utf8_encode('Lan�amentos'), array('controller'=> 'lancamentos', 'action'=>'index')); 
+    echo $html->link('Lançamentos', array('controller'=> 'lancamentos', 'action'=>'index')); 
     echo "\n<br /><br />\n"; 
   ?>
 </div>

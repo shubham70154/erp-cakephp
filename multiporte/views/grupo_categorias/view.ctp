@@ -1,4 +1,4 @@
-<div class="grupoCategoria">
+﻿<div class="grupoCategoria">
 <h2>Mostrando Grupo de Categoria</h2>
 
 	<dl>
@@ -8,14 +8,14 @@
 		<dd>&nbsp;<?php echo $grupoCategoria['SubGrupoPai']['nome']; ?></dd>
 		<dt>Nome</dt>
 		<dd>&nbsp;<?php echo $grupoCategoria['GrupoCategoria']['nome']; ?></dd>
-		<dt>Descri&ccedil;&atilde;o</dt>
+		<dt>Descrição</dt>
 		<dd>&nbsp;<?php echo $grupoCategoria['GrupoCategoria']['descricao']; ?></dd>
 	</dl>
 </div>
 <div class="actions">
 	<ul>
 		<li><?php echo $html->link('Editar Grupo de Categoria',   array('action'=>'edit', $grupoCategoria['GrupoCategoria']['id'])); ?> </li>
-		<li><?php echo $html->link('Excluir Grupo de Categoria', array('action'=>'delete', $grupoCategoria['GrupoCategoria']['id']), null, 'Voc� tem certeza que deseja excluir o grupo #' . $grupoCategoria['GrupoCategoria']['id'] . '?'); ?> </li>
+		<li><?php echo $html->link('Excluir Grupo de Categoria', array('action'=>'delete', $grupoCategoria['GrupoCategoria']['id']), null, 'Você tem certeza que deseja excluir o grupo #' . $grupoCategoria['GrupoCategoria']['id'] . '?'); ?> </li>
 		<li><?php echo $html->link('Listar Grupo de Categorias', array('action'=>'index')); ?> </li>
 		<li><?php echo $html->link('Novo Grupo de Categoria',	array('action'=>'add')); ?> </li>
 	</ul>
@@ -28,10 +28,10 @@
 	<tr>
 		<th>Id</th>
 		<th>Nome</th>
-		<th>Descri&ccedil;&atilde;o</th>
+		<th>Descrição</th>
 		<th>Criado</th>
 		<th>Modificado</th>
-		<th>A&ccedil;&otilde;es</th>
+		<th>Ações</th>
 	</tr>
 <?php foreach($grupoCategoria['SubGrupo'] as $subGrupo):?>
 	<tr>
@@ -43,7 +43,7 @@
 		<td class="actions">
 			<?php echo $html->link('Mostrar', array('controller'=> 'grupo_categorias', 'action'=>'view', $subGrupo['id'])); ?>
 			<?php echo $html->link('Editar', array('controller'=> 'grupo_categorias', 'action'=>'edit', $subGrupo['id'])); ?>
-			<?php echo $html->link('Excluir', array('controller'=> 'grupo_categorias', 'action'=>'delete', $subGrupo['id']), null, 'Voc� tem certeza que deseja excluir o sub-grupo #' . $subGrupo['id'] . '?'); ?>
+			<?php echo $html->link('Excluir', array('controller'=> 'grupo_categorias', 'action'=>'delete', $subGrupo['id']), null, 'Você tem certeza que deseja excluir o sub-grupo #' . $subGrupo['id'] . '?'); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -67,7 +67,7 @@
 		<th>Tipo</th>
 		<th>Criado</th>
 		<th>Modificado</th>
-		<th>A&ccedil;&otilde;es</th>
+		<th>Ações</th>
 	</tr>
 <?php foreach($grupoCategoria['Categoria'] as $categoria):?>
 	<tr>
@@ -80,7 +80,7 @@
 		<td class="actions">
 			<?php echo $html->link('Mostrar', array('controller'=> 'categorias', 'action'=>'view', $categoria['id'])); ?>
 			<?php echo $html->link('Editar', array('controller'=> 'categorias', 'action'=>'edit', $categoria['id'])); ?>
-			<?php echo $html->link('Excluir', array('controller'=> 'categorias', 'action'=>'delete', $categoria['id']), null, 'Voc� tem certeza que deseja excluir a categoria #' . $categoria['id'] . '?'); ?>
+			<?php echo $html->link('Excluir', array('controller'=> 'categorias', 'action'=>'delete', $categoria['id']), null, 'Você tem certeza que deseja excluir a categoria #' . $categoria['id'] . '?'); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

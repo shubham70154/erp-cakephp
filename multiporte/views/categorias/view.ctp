@@ -1,4 +1,4 @@
-<div class="categoria">
+ï»¿<div class="categoria">
 <h2>Mostrando Categoria</h2>
 
 	<dl>
@@ -24,7 +24,7 @@ foreach ($grupo_origem as $grupo) {
 <div class="actions">
 	<ul>
 		<li><?php echo $html->link('Editar Categoria',   array('action'=>'edit', $categoria['Categoria']['id'])); ?> </li>
-		<li><?php echo $html->link('Excluir Categoria', array('action'=>'delete', $categoria['Categoria']['id']), null, utf8_encode('Você tem certeza que deseja excluir a categoria #') . $categoria['Categoria']['id'] . utf8_encode('?')); ?> </li>
+		<li><?php echo $html->link('Excluir Categoria', array('action'=>'delete', $categoria['Categoria']['id']), null, 'VocÃª tem certeza que deseja excluir a categoria #' . $categoria['Categoria']['id'] . '?'); ?> </li>
 		<li><?php echo $html->link('Listar Categorias', array('action'=>'index')); ?> </li>
 		<li><?php echo $html->link('Nova Categoria',	array('action'=>'add')); ?> </li>
 		<li><?php echo $html->link('Listar Grupo de Categoria', array('controller'=> 'grupo_categoria', 'action'=>'index')); ?> </li>
@@ -46,7 +46,7 @@ foreach ($grupo_origem as $grupo) {
 		<th>Valor</th>
 		<th>Criado</th>
 		<th>Modificado</th>
-		<th>A&ccedil;&otilde;es</th>
+		<th>AÃ§Ãµes</th>
 	</tr>
 <?php foreach($categoria['Lancamento'] as $lancamento):?>
 	<tr>
@@ -62,7 +62,7 @@ foreach ($grupo_origem as $grupo) {
 		<td class="actions">
 			<?php echo $html->link('Mostrar', array('controller'=> 'lancamentos', 'action'=>'view', $lancamento['id'])); ?>
 			<?php echo $html->link('Editar', array('controller'=> 'lancamentos', 'action'=>'edit', $lancamento['id'])); ?>
-			<?php echo $html->link('Excluir', array('controller'=> 'lancamentos', 'action'=>'delete', $lancamento['id']), null, utf8_encode('Você tem certeza que deseja excluir o lançamento #') . $lancamento['id'] . utf8_encode('?')); ?>
+			<?php echo $html->link('Excluir', array('controller'=> 'lancamentos', 'action'=>'delete', $lancamento['id']), null, 'VocÃª tem certeza que deseja excluir o lanÃ§amento #' . $lancamento['id'] . '?'); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -71,7 +71,7 @@ foreach ($grupo_origem as $grupo) {
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $html->link(utf8_encode('Novo Lançamento'), array('controller'=> 'lancamentos', 'action'=>'add'));?> </li>
+			<li><?php echo $html->link('Novo LanÃ§amento', array('controller'=> 'lancamentos', 'action'=>'add'));?> </li>
 		</ul>
 	</div>
 </div>

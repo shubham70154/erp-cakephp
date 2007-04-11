@@ -6,14 +6,14 @@
 		<dd>&nbsp;<?php echo $conta['Conta']['id']; ?></dd>
 		<dt>Nome</dt>
 		<dd>&nbsp;<?php echo $conta['Conta']['nome']; ?></dd>
-		<dt>Descri&ccedil;&atilde;o</dt>
+		<dt>Descrição</dt>
 		<dd>&nbsp;<?php echo $conta['Conta']['descricao']; ?></dd>
 	</dl>
 </div>
 <div class="actions">
 	<ul>
 		<li><?php echo $html->link('Editar Conta',   array('action'=>'edit', $conta['Conta']['id'])); ?> </li>
-		<li><?php echo $html->link('Excluir Conta', array('action'=>'delete', $conta['Conta']['id']), null, utf8_encode('Você tem certeza que deseja excluir a conta #') . $conta['Conta']['id'] . utf8_encode('?')); ?> </li>
+		<li><?php echo $html->link('Excluir Conta', array('action'=>'delete', $conta['Conta']['id']), null, 'Você tem certeza que deseja excluir a conta #' . $conta['Conta']['id'] . '?'); ?> </li>
 		<li><?php echo $html->link('Listar Contas', array('action'=>'index')); ?> </li>
 		<li><?php echo $html->link('Nova Conta', array('action'=>'add')); ?> </li>
 	</ul>
@@ -33,7 +33,7 @@
 		<th>Valor</th>
 		<th>Criado</th>
 		<th>Modificado</th>
-		<th>A&ccedil;&otilde;es</th>
+		<th>Ações</th>
 	</tr>
 <?php foreach($conta['Lancamento'] as $lancamento):?>
 	<tr>
@@ -49,7 +49,7 @@
 		<td class="actions">
 			<?php echo $html->link('Mostrar', array('controller'=> 'lancamentos', 'action'=>'view', $lancamento['id'])); ?>
 			<?php echo $html->link('Editar', array('controller'=> 'lancamentos', 'action'=>'edit', $lancamento['id'])); ?>
-			<?php echo $html->link('Excluir', array('controller'=> 'lancamentos', 'action'=>'delete', $lancamento['id']), null, utf8_encode('Você tem certeza que deseja excluir o lançamento #') . $lancamento['id'] . utf8_encode('?')); ?>
+			<?php echo $html->link('Excluir', array('controller'=> 'lancamentos', 'action'=>'delete', $lancamento['id']), null, 'Você tem certeza que deseja excluir o lançamento #' . $lancamento['id'] . '?'); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -58,7 +58,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $html->link(utf8_encode('Novo Lançamento'), array('controller'=> 'lancamentos', 'action'=>'add'));?> </li>
+			<li><?php echo $html->link('Novo Lançamento', array('controller'=> 'lancamentos', 'action'=>'add'));?> </li>
 		</ul>
 	</div>
 </div>

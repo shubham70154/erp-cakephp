@@ -1,4 +1,4 @@
-<div class="centrocusto">
+﻿<div class="centrocusto">
 <h2>Novo Centro de Custo</h2>
 	<?php echo $form->create('CentroCusto');?>
 		<?php echo $form->input('nome', array('class' => 'required'));?>

@@ -1,4 +1,4 @@
-<div class="centroCusto">
+﻿<div class="centroCusto">
 <h2>Mostrando Centro de Custo</h2>
 
 	<dl>
@@ -6,21 +6,21 @@
 		<dd>&nbsp;<?php echo $centroCusto['CentroCusto']['id']; ?></dd>
 		<dt>Nome</dt>
 		<dd>&nbsp;<?php echo $centroCusto['CentroCusto']['nome']; ?></dd>
-		<dt>Descri&ccedil;&atilde;o</dt>
+		<dt>Descrição</dt>
 		<dd>&nbsp;<?php echo $centroCusto['CentroCusto']['descricao']; ?></dd>
 	</dl>
 </div>
 <div class="actions">
 	<ul>
 		<li><?php echo $html->link('Editar Centro de Custo',   array('action'=>'edit', $centroCusto['CentroCusto']['id'])); ?> </li>
-		<li><?php echo $html->link('Excluir Centro de Custo', array('action'=>'delete', $centroCusto['CentroCusto']['id']), null, utf8_encode('Voc� tem certeza que deseja excluir o centro de custo #') . $centroCusto['CentroCusto']['id'] . utf8_encode('?')); ?> </li>
+		<li><?php echo $html->link('Excluir Centro de Custo', array('action'=>'delete', $centroCusto['CentroCusto']['id']), null, 'Você tem certeza que deseja excluir o centro de custo #' . $centroCusto['CentroCusto']['id'] . '?'); ?> </li>
 		<li><?php echo $html->link('Listar Centros de Custo', array('action'=>'index')); ?> </li>
 		<li><?php echo $html->link('Novo Centro de Custo', array('action'=>'add')); ?> </li>
 	</ul>
 
 </div>
 <div class="related">
-<h3>Lan�amentos Relacionados</h3>
+<h3>Lançamentos Relacionados</h3>
 <?php if(!empty($centroCusto['Lancamento'])):?>
 <table cellpadding="0" cellspacing="0">
 	<tr>
@@ -28,12 +28,12 @@
 		<th>Centro Custo</th>
 		<th>Categoria</th>
 		<th>Conta</th>
-		<th>Descri&ccedil;&atilde;o</th>
+		<th>Descrição</th>
 		<th>Data</th>
 		<th>Valor</th>
 		<th>Criado</th>
 		<th>Modificado</th>
-		<th>A&ccedil;&otilde;es</th>
+		<th>Ações</th>
 	</tr>
 <?php foreach($centroCusto['Lancamento'] as $lancamento):?>
 	<tr>
@@ -49,7 +49,7 @@
 		<td class="actions">
 			<?php echo $html->link('Mostrar', array('controller'=> 'lancamentos', 'action'=>'view', $lancamento['id'])); ?>
 			<?php echo $html->link('Editar', array('controller'=> 'lancamentos', 'action'=>'edit', $lancamento['id'])); ?>
-			<?php echo $html->link('Excluir', array('controller'=> 'lancamentos', 'action'=>'delete', $lancamento['id']), null, utf8_encode('Voc� tem certeza que deseja excluir o lan�amento #') . $lancamento['id'] . utf8_encode('?')); ?>
+			<?php echo $html->link('Excluir', array('controller'=> 'lancamentos', 'action'=>'delete', $lancamento['id']), null, 'Você tem certeza que deseja excluir o lançamento #' . $lancamento['id'] . '?'); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

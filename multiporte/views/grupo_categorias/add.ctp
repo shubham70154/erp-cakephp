@@ -1,4 +1,4 @@
-<div class="grupocategoria">
+﻿<div class="grupocategoria">
 <h2>Novo Grupo de Categoria</h2>
 	<?php echo $form->create('GrupoCategoria');?>
 		<?php echo $form->input('sub_grupo_id');?>
